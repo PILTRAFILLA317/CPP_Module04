@@ -1,13 +1,14 @@
-NAME = animal
+NAME = brain
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address -g3
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g3
 RM = rm -f
 
 FILE = main \
-animal \
-dog \
-cat \
+Animal \
+Dog \
+Cat \
+Brain \
 
 SRCS = $(addsuffix .cpp, $(FILE))
 OBJS = $(addsuffix .o, $(FILE))
