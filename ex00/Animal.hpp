@@ -12,7 +12,7 @@ protected:
 public:
 	Animal();
 	Animal(const Animal &obj);
-	~Animal();
+	virtual ~Animal();
 	Animal &operator=(const Animal &obj);
 	std::string getType() const;
 	virtual void makeSound() const;
@@ -27,7 +27,7 @@ public:
 	WrongAnimal();
 	WrongAnimal(const WrongAnimal &obj);
 	WrongAnimal(std::string name);
-	~WrongAnimal();
+	virtual ~WrongAnimal();
 	WrongAnimal &operator=(const WrongAnimal &obj);
 	std::string getType() const;
 	void makeSound() const;

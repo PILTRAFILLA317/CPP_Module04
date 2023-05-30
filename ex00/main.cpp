@@ -14,6 +14,9 @@ int main()
 		i->makeSound(); //will output the cat sound!
 		j->makeSound();
 		meta->makeSound();
+		delete meta;
+		delete j;
+		delete i;
 	}
 	{
 		std::cout << "---------------------" << std::endl;
@@ -27,6 +30,10 @@ int main()
 		j->makeSound();
 		e->makeSound();
 		meta->makeSound();
+		delete meta;
+		delete j;
+		delete i;
+		delete e;
 	}
 return 0;
 }
