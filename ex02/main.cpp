@@ -5,7 +5,6 @@
 int main()
 {
 	Animal	*animals[10];
-	Animal	test;
 	Dog		dog;
 	Dog		dog2(dog);
 	std::cout << "\n" << dog.getBrain() << "\n";
