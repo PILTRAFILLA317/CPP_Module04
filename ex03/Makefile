@@ -1,4 +1,4 @@
-NAME = brain
+NAME = mate
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g3
@@ -9,6 +9,7 @@ AMateria \
 Character \
 Cure \
 Ice \
+MateriaSource \
 
 SRCS = $(addsuffix .cpp, $(FILE))
 OBJS = $(addsuffix .o, $(FILE))

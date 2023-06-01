@@ -58,3 +58,12 @@ void Character::use(int idx, ICharacter& target){
 	if (this->_inventory[idx] != NULL)
 		this->_inventory[idx]->use(target);
 }
+
+void Character::printInventory(){
+	for (int i = 0; i < 4; i++){
+		if (this->_inventory[i] != NULL)
+			std::cout << "Inventory slot " << i << ": " << this->_inventory[i]->getType() << std::endl;
+		else
+			std::cout << "Inventory slot " << i << ": empty" << std::endl;
+	}
+}

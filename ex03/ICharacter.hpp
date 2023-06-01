@@ -5,6 +5,8 @@
 #include <string>
 #include "AMateria.hpp"
 
+class AMateria;
+
 class ICharacter
 {
 	public:
@@ -13,6 +15,7 @@ class ICharacter
 		virtual void equip(AMateria* m) = 0;
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter& target) = 0;
+		virtual void printInventory() = 0;
 };
 
 #endif

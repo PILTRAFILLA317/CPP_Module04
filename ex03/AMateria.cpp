@@ -29,3 +29,7 @@ AMateria::AMateria(std::string const & type){
 std::string const & AMateria::getType() const{
 	return this->_type;
 }
+
+void	AMateria::use(ICharacter &target){
+	std::cout << "AMateria: " << "\"*AMaterias an AMateria at " << target.getName() << "*\"" << std::endl;
+}
