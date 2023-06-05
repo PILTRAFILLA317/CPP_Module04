@@ -2,21 +2,17 @@
 #include "AMateria.hpp"
 
 Ice::~Ice(){
-	std::cout << "Ice destructor called" << "\n";
 }
 
 Ice::Ice(){
-	this->_type = "Ice";
-	std::cout << "Ice default constructor called" << "\n";
+	this->_type = "ice";
 }
 
 Ice::Ice(const Ice& obj){
-	std::cout << "Ice copy constructor called" << "\n";
 	*this = obj;
 }
 
 Ice &Ice::operator=(const Ice& obj){
-	std::cout << "Ice assignation operator called" << "\n";
 	if (this != &obj){
 		this->_type = obj._type;
 	}

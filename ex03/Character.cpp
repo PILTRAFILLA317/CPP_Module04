@@ -2,26 +2,25 @@
 #include "AMateria.hpp"
 
 Character::~Character(){
-	std::cout << "Character destructor called" << "\n";
 }
 
 Character::Character(){
 	this->_name = "Character";
-	std::cout << "Character default constructor called" << "\n";
+	for (int i = 0; i < 4; i++)
+		this->_inventory[i] = NULL;
 }
 
 Character::Character(std::string name){
 	this->_name = name;
-	std::cout << "Character parameter constructor called" << "\n";
+	for (int i = 0; i < 4; i++)
+		this->_inventory[i] = NULL;
 }
 
 Character::Character(const Character& obj){
-	std::cout << "Character copy constructor called" << "\n";
 	*this = obj;
 }
 
 Character &Character::operator=(const Character& obj){
-	std::cout << "Character assignation operator called" << "\n";
 	if (this != &obj){
 		this->_name = obj._name;
 		for (int i = 0; i < 4; i++){

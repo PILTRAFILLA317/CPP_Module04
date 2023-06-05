@@ -37,9 +37,21 @@ void MateriaSource::learnMateria(AMateria* m){
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type){
+	if (type != "ice" && type != "cure")
+		return NULL;
 	for (int i = 0; i < 4; i++){
-		if (this->_inventory[i] != NULL && this->_inventory[i]->getType() == type)
-			return this->_inventory[i]->clone();
+		if (this->_inventory[i] != NULL && this->_inventory[i]->getType() == type){
+			return (this->_inventory[i]->clone());
+		}
 	}
 	return NULL;
+}
+
+void MateriaSource::printInventory(){
+	for (int i = 0; i < 4; i++){
+		if (this->_inventory[i] != NULL)
+			std::cout << this->_inventory[i]->getType() << std::endl;
+		else
+			std::cout << "null" << std::endl;
+	}
 }
