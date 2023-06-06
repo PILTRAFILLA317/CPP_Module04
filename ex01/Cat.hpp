@@ -13,7 +13,7 @@ class Cat : public Animal
 	public:
 		Cat();
 		Cat(const Cat &obj);
-		~Cat();
+		virtual ~Cat();
 		Cat &operator=(const Cat &obj);
 		void makeSound() const;
 		using Animal::getType;
@@ -27,7 +27,7 @@ class WrongCat : public WrongAnimal
 	public:
 		WrongCat();
 		WrongCat(const WrongCat &obj);
-		~WrongCat();
+		virtual ~WrongCat();
 		WrongCat &operator=(const WrongCat &obj);
 		void makeSound() const;
 		using WrongAnimal::getType;

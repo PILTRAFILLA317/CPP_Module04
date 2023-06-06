@@ -48,6 +48,7 @@ void hardTest(){
 	me->use(4, *bob);
 	me->use(-2, *bob);
 	me->use(-1, *bob);
+	delete tmp;
 	delete bob;
 	delete me;
 	delete src;
