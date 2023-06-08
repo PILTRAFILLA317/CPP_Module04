@@ -5,9 +5,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address -g3
 RM = rm -f
 
 FILE = main \
-animal \
-dog \
-cat \
+Animal \
+Dog \
+Cat \
 
 SRCS = $(addsuffix .cpp, $(FILE))
 OBJS = $(addsuffix .o, $(FILE))
